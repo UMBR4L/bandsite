@@ -1,0 +1,283 @@
+/* global.sass */
+/* Colors */
+html {
+  --bandsite-black: #323232;
+  --silver: #afafaf;
+  --white: #ffffff;
+  --bandsite-darkblack: #000000;
+  --mercury: #e1e1e1;
+  --alabaster: #fafafa;
+}
+
+/* Global Font Styles */
+/* Page Header, Section Header */
+h1,
+h2 {
+  font-family: "Avenir Next Bold", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  h1 {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+@media (min-width: 1280px) {
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+/* Subheader */
+h3 {
+  font-family: "Avenir Next Demi", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* Body Copy, Footer Copy */
+h4,
+h5 {
+  font-family: "Avenir Next Regular", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  p,
+  h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1280px) {
+  p,
+  h4 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Labels & Buttons */
+h6 {
+  font-family: "Avenir Next Bold", sans-serif;
+  font-size: 10px;
+  line-height: 20px;
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  h6 {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  h6 {
+    font-size: 12px;
+  }
+}
+
+.heading {
+  font-size: 1.5em;
+}
+
+/* Header and Navigation Bar */
+nav.site-navigation {
+  background-color: var(--bandsite-black);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  nav.site-navigation {
+    flex-direction: row;
+    align-items: center;
+    max-height: 14vw;
+  }
+}
+@media (min-width: 1280px) {
+  nav.site-navigation {
+    flex-direction: row;
+    align-items: center;
+    max-height: 14vw;
+  }
+}
+
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .site-navigation__home-logo {
+    padding: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .site-navigation__home-logo {
+    padding: 2.25rem;
+  }
+}
+
+a.bandsite-logo {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.site-navigation__links {
+  display: flex;
+  justify-content: space-around;
+  height: 2.5rem;
+  background-color: var(--bandsite-black);
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .site-navigation__links {
+    align-items: center;
+    width: 30vw;
+    min-height: 14vw;
+  }
+}
+@media (min-width: 1280px) {
+  .site-navigation__links {
+    flex-direction: row;
+    align-items: center;
+    width: 30vw;
+    min-height: 14vw;
+  }
+}
+
+h2.site-navigation__links--link {
+  margin: 0;
+}
+
+h2.site-navigation__links--link > a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.5em;
+}
+
+.current-page {
+  text-decoration: underline;
+}
+
+/* Main */
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  main {
+    padding: 3rem 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  main {
+    padding: 6rem 4.5rem;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--bandsite-black);
+  color: var(--white);
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  footer {
+    padding-left: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  footer {
+    padding-left: 5rem;
+  }
+}
+
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .contact-info__heading-and-socials {
+    display: flex;
+    max-width: 50%;
+    justify-content: space-between;
+    margin-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .contact-info__heading-and-socials {
+    display: flex;
+    max-width: 50%;
+    justify-content: space-between;
+    margin-left: 2.25rem;
+  }
+}
+
+h4.contact-info__heading.heading {
+  font-size: 3em;
+}
+
+.contact-info__socials {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  section.contact-info__employees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1280px) {
+  section.contact-info__employees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  h1.bandsite-logo {
+    position: relative;
+    left: 75%;
+    bottom: 85%;
+    font-size: 2em;
+    font-weight: normal;
+    max-width: 15%;
+  }
+}
+@media (min-width: 1280px) {
+  h1.bandsite-logo {
+    position: relative;
+    left: 75%;
+    bottom: 85%;
+    font-size: 2em;
+    font-weight: normal;
+    max-width: 15%;
+  }
+}
+
+div.contact-info__trademark {
+  background-color: var(--bandsite-black);
+}/*# sourceMappingURL=global.css.map */
