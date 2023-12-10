@@ -1,0 +1,254 @@
+/* global.sass */
+
+@import "./mixins";
+
+/* Colors */
+html {
+  --bandsite-black: #323232;
+  --silver: #afafaf;
+  --white: #ffffff;
+  --bandsite-darkblack: #000000;
+  --mercury: #e1e1e1;
+  --alabaster: #fafafa;
+
+  font-family: "Avenir Next", sans-serif;
+}
+
+/* Global Font Styles */
+/* Page Header, Section Header */
+h1,
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h1 {
+  @include tablet {
+    font-size: 60px;
+    line-height: 68px;
+  }
+  @include desktop {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+h2 {
+  @include tablet {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  @include desktop {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+/* Subheader */
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* Body Copy, Footer Copy */
+h4,
+h5 {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p,
+h4 {
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+h5 {
+  @include tablet {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Labels & Buttons */
+h6 {
+  font-size: 10px;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 12px;
+  }
+  @include desktop {
+    font-size: 12px;
+  }
+}
+
+.heading {
+  font-size: 1.5em;
+}
+
+/* Header and Navigation Bar */
+nav.site-navigation {
+  background-color: var(--bandsite-black);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    max-height: 14vw;
+  }
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    max-height: 14vw;
+  }
+}
+
+.site-navigation__home-logo {
+  @include tablet {
+    padding: 2.25rem;
+  }
+  @include desktop {
+    padding: 2.25rem;
+  }
+}
+
+a.bandsite-logo {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.site-navigation__links {
+  display: flex;
+  justify-content: space-around;
+  height: 2.5rem;
+  background-color: var(--bandsite-black);
+
+  @include tablet {
+    align-items: center;
+    width: 30vw;
+    min-height: 14vw;
+  }
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    width: 30vw;
+    min-height: 14vw;
+  }
+}
+
+h2.site-navigation__links--link {
+  margin: 0;
+}
+
+h2.site-navigation__links--link > a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 0.5em;
+}
+
+.current-page {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  @include tablet {
+    padding: 3rem 2.25rem;
+  }
+  @include desktop {
+    padding: 6rem 4.5rem;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--bandsite-black);
+  color: var(--white);
+  @include tablet {
+    padding-left: 5rem;
+    // max-height: 25%;
+  }
+  @include desktop {
+    padding-left: 5rem;
+    // max-height: 25%;
+  }
+}
+
+.contact-info__heading-and-socials {
+  @include tablet {
+    display: flex;
+    max-width: 50%;
+    justify-content: space-between;
+    margin-left: 2.25rem;
+  }
+  @include desktop {
+    display: flex;
+    max-width: 50%;
+    justify-content: space-between;
+    margin-left: 2.25rem;
+  }
+}
+
+h4.contact-info__heading.heading {
+  font-size: 3em;
+}
+
+.contact-info__socials {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.contact-info__employees {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+h1.bandsite-logo {
+  @include tablet {
+    position: relative;
+    left: 75%;
+    bottom: 85%;
+    font-size: 2em;
+    font-weight: normal;
+    max-width: 15%;
+  }
+  @include desktop {
+    position: relative;
+    left: 75%;
+    bottom: 85%;
+    font-size: 2em;
+    font-weight: normal;
+    max-width: 15%;
+  }
+}
+
+div.contact-info__trademark {
+  background-color: var(--bandsite-black);
+}

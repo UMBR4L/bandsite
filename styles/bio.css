@@ -25,21 +25,21 @@ main {
 /* fonts.sass */
 /* Font Faces */
 @font-face {
-  font-family: "Avenir Next Regular";
-  src: url("../assets/Fonts/AvenirNextLTPro-Regular.otf") format("otf");
+  font-family: "Avenir Next";
+  src: url("../assets/Fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next Demi";
-  src: url("../assets/Fonts/AvenirNextLTPro-Demi.otf") format("otf");
-  font-weight: bolder;
+  font-family: "Avenir Next";
+  src: url("../assets/Fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next Bold";
-  src: url("../assets/Fonts/AvenirNextLTPro-Bold.otf") format("otf");
-  font-weight: bold;
+  font-family: "Avenir Next";
+  src: url("../assets/Fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 600;
   font-style: normal;
 }
 /* global.sass */
@@ -51,13 +51,13 @@ html {
   --bandsite-darkblack: #000000;
   --mercury: #e1e1e1;
   --alabaster: #fafafa;
+  font-family: "Avenir Next", sans-serif;
 }
 
 /* Global Font Styles */
 /* Page Header, Section Header */
 h1,
 h2 {
-  font-family: "Avenir Next Bold", sans-serif;
   font-size: 24px;
   line-height: 32px;
 }
@@ -90,7 +90,6 @@ h2 {
 
 /* Subheader */
 h3 {
-  font-family: "Avenir Next Demi", sans-serif;
   font-size: 24px;
   line-height: 32px;
 }
@@ -98,7 +97,6 @@ h3 {
 /* Body Copy, Footer Copy */
 h4,
 h5 {
-  font-family: "Avenir Next Regular", sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -133,7 +131,6 @@ h5 {
 
 /* Labels & Buttons */
 h6 {
-  font-family: "Avenir Next Bold", sans-serif;
   font-size: 10px;
   line-height: 20px;
 }
@@ -340,18 +337,18 @@ div.contact-info__trademark {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
 }
 
-h3.hero__heading {
+.hero__heading {
   color: var(--white);
   padding: 0 1rem;
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
-  h3.hero__heading {
+  .hero__heading {
     padding: 0 2rem;
     font-size: 4em;
   }
 }
 @media (min-width: 1280px) {
-  h3.hero__heading {
+  .hero__heading {
     padding: 0 10rem;
     font-size: 4em;
   }
@@ -391,36 +388,36 @@ h3.hero__heading {
   }
 }
 
-p.about__quote {
+.about__quote {
   font-weight: bold;
   line-height: 1.5rem;
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
-  p.about__quote {
+  .about__quote {
     padding: 0 5em;
     max-width: 80%;
   }
 }
 @media (min-width: 1280px) {
-  p.about__quote {
+  .about__quote {
     padding: 0 10em;
     max-width: 80%;
   }
 }
 
-h5#about__band-name {
+#about__band-name {
   font-family: "Avenir Next Demi", sans-serif;
   font-size: 1rem;
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
-  h5#about__band-name {
+  #about__band-name {
     padding: 2em 5em 0;
     max-width: 80%;
     margin-bottom: 0.5em;
   }
 }
 @media (min-width: 1280px) {
-  h5#about__band-name {
+  #about__band-name {
     padding: 2em 9em 0;
     max-width: 70%;
     margin-bottom: 0.5em;

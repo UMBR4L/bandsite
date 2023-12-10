@@ -1,9 +1,9 @@
 /* bio.sass */
 
-@import "./partials/reset.scss";
-@import "./partials/fonts.scss";
-@import "./partials/global.scss";
-@import "./partials/mixins.scss";
+@use "./partials/reset.scss";
+@use "./partials/fonts.scss";
+@use "./partials/global.scss";
+@use "./partials/mixins.scss" as *;
 
 /* Rest of your styles go here */
 /* Hero */
@@ -19,7 +19,7 @@
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
 }
 
-h3.hero__heading {
+.hero__heading {
   color: var(--white);
   padding: 0 1rem;
 
@@ -60,7 +60,7 @@ h4.about__heading.heading {
   }
 }
 
-p.about__quote {
+.about__quote {
   font-weight: bold;
   line-height: 1.5rem;
   @include tablet {
@@ -73,7 +73,7 @@ p.about__quote {
   }
 }
 
-h5#about__band-name {
+#about__band-name {
   font-family: "Avenir Next Demi", sans-serif;
   font-size: 1rem;
   @include tablet {
