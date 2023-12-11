@@ -1,9 +1,9 @@
 /* bio.sass */
 
-@use "./partials/reset.scss";
-@use "./partials/fonts.scss";
-@use "./partials/global.scss";
-@use "./partials/mixins.scss" as *;
+@use "./partials/_reset.scss";
+@use "./partials/_fonts.scss";
+@use "./partials/_global.scss";
+@use "./partials/_mixins.scss" as *;
 
 /* Rest of your styles go here */
 /* Hero */
@@ -142,4 +142,11 @@ img.gallery__photo {
   @include desktop {
     max-width: 30%;
   }
+}
+
+/* Comments Section */
+.commentForm__div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }

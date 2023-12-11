@@ -490,4 +490,11 @@ img.gallery__photo {
   img.gallery__photo {
     max-width: 30%;
   }
+}
+
+/* Comments Section */
+.commentForm__div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }/*# sourceMappingURL=bio.css.map */

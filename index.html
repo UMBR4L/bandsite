@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Band Site | Home</title>
+
     <link rel="stylesheet" href="./styles/bio.css" />
+
+    <script defer src="./scripts/index-page.js"></script>
+
+    <title>Band Site | Home</title>
   </head>
 
   <body>
@@ -124,6 +128,34 @@
             class="gallery__photo"
           />
         </div>
+      </section>
+
+      <section class="comment-section">
+        <h4 class="heading">Join the Conversation</h4>
+
+        <form id="commentForm">
+          <div class="commentForm__div">
+            <input
+              class="commentForm__div--nameInput"
+              type="text"
+              name="userName"
+              value="Enter your name"
+            />
+            <!-- <input type="text" name="userComment"> -->
+            <input
+              class="commentForm__div--commentInput"
+              type="text"
+              name="userComment"
+              value="Add a new comment"
+            />
+            <!-- <textarea name="commentArea" value="Add a new comment"></textarea> -->
+            <button type="submit">Comment</button>
+          </div>
+        </form>
+
+        <ul class="comment-list">
+          <!-- Dynamic HTML inserted using DOM manipulation-->
+        </ul>
       </section>
     </main>
 
