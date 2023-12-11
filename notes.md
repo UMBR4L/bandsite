@@ -21,17 +21,15 @@ To-Do:
             x clears the input fields after submitting a new comment
 - create a shows page that displays the shows using DOM methods
     - HTML:
-        - same header and footer
-        - update hero image
-        - add a header "shows"
-        - add a div/section with a class to use as a container/parent element
+        x same header and footer
+        x update hero image
+        x add a header "shows"
+        x add a div/section with a class to use as a container/parent element
     - JS:
-        - SoundCloud song embed
-            - import soundcloud api
-            - embed song
-        - create a list of shows
-            - create an array with all the show data
-                - Properties: Date, Venue, Location
+        x SoundCloud song embed
+        x create a list of shows
+            x create an array with all the show data
+                x Properties: Date, Venue, Location
         - add specific styling for when individual show items are hovered or clicked
             - on hover over a show item, the "hover state" style will be applied
                 - use a pseudo-class in Sass

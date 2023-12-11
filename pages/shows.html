@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/shows.css" />
+
+    <script src="https://w.soundcloud.com/player/api.js" async></script>
+    <script defer src="../scripts/build-shows-page.js"></script>
+
+    <title>Band Site | Shows</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="site-navigation">
+        <div class="site-navigation__home-logo">
+          <h1><a class="bandsite-logo" href="../index.html">BANDSITE</a></h1>
+        </div>
+
+        <div class="site-navigation__links">
+          <h2 class="site-navigation__links--link current-page">
+            <a href="../index.html">Biography</a>
+          </h2>
+          <h2 class="site-navigation__links--link"><a href="./shows.html">Shows</a></h2>
+        </div>
+      </nav>
+      <!-- Hero image with band name -->
+      <div class="hero">
+        <h3 class="hero__heading heading">Club Club Worldwide!</h3>
+        <h2 class="hero__heading subheading">XG - LEFT RIGHT (HaZo X Ask Me Anything Remix)</h2>
+        <div hero__soundcloud-player>
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1607535498&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          ></iframe>
+          <div
+            style="
+              font-size: 10px;
+              color: #cccccc;
+              line-break: anywhere;
+              word-break: normal;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+              font-weight: 100;
+            "
+          >
+            <a
+              href="https://soundcloud.com/clubclubworldwide"
+              title="Club Club Worldwide!"
+              target="_blank"
+              style="color: #cccccc; text-decoration: none"
+              >Club Club Worldwide!</a
+            >
+            ·
+            <a
+              href="https://soundcloud.com/clubclubworldwide/left-right-hazo-ama-remix"
+              title="XG - LEFT RIGHT (HaZo X Ask Me Anything Remix)"
+              target="_blank"
+              style="color: #cccccc; text-decoration: none"
+              >XG - LEFT RIGHT (HaZo X Ask Me Anything Remix)</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="shows">
+        <h2>Shows</h2>
+        <ul class="shows-list">
+          <!-- Dynamic HTML inserted using DOM manipulation-->
+        </ul>
+      </section>
+    </main>
+
+    <footer class="contact-info">
+      <div class="contact-info__heading-and-socials">
+        <h4 class="contact-info__heading heading">Get in Touch</h4>
+        <div class="contact-info__socials">
+          <img
+            class="icon"
+            src="../assets/Icons/SVG/Icon-instagram.svg"
+            alt="instagram link"
+          />
+          <img
+            class="icon"
+            src="../assets/Icons/SVG/Icon-facebook.svg"
+            alt="facebook link"
+          />
+          <img
+            class="icon"
+            src="../assets/Icons/SVG/Icon-twitter.svg"
+            alt="twitter link"
+          />
+        </div>
+      </div>
+
+      <section class="contact-info__employees">
+        <section class="contact-info__employees--employee">
+          <h5>Cam Adams<br />The Bees Knees Management</h5>
+          <p>
+            503 Broadway Penthouse,<br />
+            New York, NY 10012, USA
+          </p>
+          <p>info@thebeesknees.com</p>
+        </section>
+        <section class="contact-info__employees--employee">
+          <h5>Pearl Gregg<br />Limitless Artist Group</h5>
+          <p>Booking Agent for<br />US / South America / Japan</p>
+          <p>pearl.gregg@limitlessag.com</p>
+        </section>
+        <section class="contact-info__employees--employee">
+          <h5>Carson Whyte<br />ARCH Entertainment</h5>
+          <p>Booking Agent for<br />UK / EU / AU</p>
+          <p>cwhyte@archentertainment.com</p>
+          <br />
+          <br />
+        </section>
+      </section>
+      <h1 class="bandsite-logo">BANDSITE</h1>
+      <div class="contact-info__trademark">
+        <h6>Copyright The Bees Knees © 2021 All Rights Reserved</h6>
+      </div>
+    </footer>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>
