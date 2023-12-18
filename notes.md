@@ -85,3 +85,49 @@ HTML/CSS:
 JS:
 - make a list of songs (array of objects): each has a title of the song, name of artist, duration, genre
 - function to make the elements for each song
+
+
+# Sprint 3
+
+## Overview
+- make the site functional with comments and shows data retrieved from the server
+
+## API
+- https://project-1-api.herokuapp.com/
+    - must register for an API key
+
+## Functional Requirements
+
+### BandSiteApi Class
+- in 'band-site-api.js'
+- must have the following methods:
+    - constructor(apiKey)
+    - postComment(commentObject)
+    - getComments()
+    - getShows()
+- must create an instance of the BandSiteApi class and use this to interact with the API
+- any class method that makes an API request must be marked with the 'async' keyword
+    - remember to use 'await' when calling an async method
+
+### Bio Page - Comments Seciont
+- must retrieve commend data from the provided API using the instance of 'BandSiteApi' class and display it on the page
+- users must be able to add new comments
+    - these comments are stroed in the backend using the instance of 'BandSiteApi' to communicate with the Api
+- newly-added comments must be displayed with the existing comments with the newest comments at the top
+- the Bio Page must not reload when a comment is added
+- new comments are not required to have a provided avatar image
+    - they can use a placeholder
+
+### Shows Page
+- must display shows data retrieved from the API using the instance of 'BandSiteApi'
+
+## Implementation Requirements
+- as this is the final sprint and represents the completed product that the "client" requested, any feedback provided on previous sprints must be addressed in this submission
+- must follow proper folder structure and naming convention as outline in the Project Details
+- CSS must be compiled from Sass, and should use Sass features (such as variables and mixins)
+- CSS classes must use the BEM convention
+- the site must use Flexbox for layout
+- the site must use Axios for API HTTP requests
+    - the Axios library should be included as a script element in the page
+- event handlers must be registered using 'addEventListener', not HTML attributes (such as 'onsubmit' or 'onclick')
+
