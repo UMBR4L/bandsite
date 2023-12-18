@@ -17,24 +17,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
-}
 
-.hero__heading {
-  color: var(--white);
-  padding: 0 1rem;
+  &__heading {
+    color: var(--white);
+    padding: 0 1rem;
 
-  @include tablet {
-    padding: 0 2rem;
-    font-size: 4em;
-  }
-  @include desktop {
-    padding: 0 10rem;
-    font-size: 4em;
+    @include tablet {
+      padding: 0 2rem;
+      font-size: 4em;
+    }
+    @include desktop {
+      padding: 0 10rem;
+      font-size: 4em;
+    }
   }
 }
 
 /* About the Musicians */
-h4.about__heading.heading {
+.about__heading.heading {
   @include tablet {
     font-size: 3em;
     margin: 0 0 36px;
@@ -88,7 +88,7 @@ h4.about__heading.heading {
   }
 }
 
-div.about__main-text {
+.about__main-text {
   @include tablet {
     display: flex;
     justify-content: center;
@@ -97,16 +97,15 @@ div.about__main-text {
     display: flex;
     justify-content: center;
   }
-}
-
-div.about__main-text p {
-  @include tablet {
-    padding: 0 2em 2em 0;
-    max-width: 38%;
-  }
-  @include desktop {
-    padding: 0 2em 2em 0;
-    max-width: 38%;
+  & p {
+    @include tablet {
+      padding: 0 2em 2em 0;
+      max-width: 38%;
+    }
+    @include desktop {
+      padding: 0 2em 2em 0;
+      max-width: 38%;
+    }
   }
 }
 
@@ -133,7 +132,7 @@ h4.gallery__heading.heading {
   }
 }
 
-img.gallery__photo {
+.gallery__photo {
   margin-bottom: 1rem;
   max-width: 100%;
   @include tablet {
@@ -150,3 +149,37 @@ img.gallery__photo {
   flex-direction: column;
   align-items: stretch;
 }
+
+.commentForm__input--name {
+  max-width: 65%;
+  min-height: 2rem;
+}
+
+.commentForm__input--comment {
+  max-width: 65%;
+  min-height: 2rem;
+}
+
+.commentForm__button--submitComment {
+  max-width: 65%;
+  min-height: 2rem;
+}
+
+.comment-list {
+  padding-left: 0;
+}
+
+.comment {
+  list-style: none;
+  margin-left: 0;
+
+  &__nameDate--container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__timeStamp {
+    color: var(--silver);
+  }
+}
+

@@ -123,6 +123,7 @@ nav.site-navigation {
   padding: 1rem 0 0;
   @include tablet {
     padding: 2.25rem;
+    float: left;
   }
   @include desktop {
     padding: 2.25rem;
@@ -148,8 +149,9 @@ nav.site-navigation {
 
   @include tablet {
     align-items: center;
-    width: 30vw;
+    width: 50vw;
     min-height: 14vw;
+    
   }
   @include desktop {
     flex-direction: row;
@@ -171,7 +173,14 @@ nav.site-navigation {
   text-decoration: none;
   font-weight: normal;
   font-size: 0.5em;
-  padding: 0 100% 1rem;
+  padding: 1rem 4.5rem;
+  
+  @include tablet {
+    padding: 3rem 0rem;
+  }
+  @include desktop {
+    padding: 5rem 0rem;
+  }
 }
 
 #current-page {

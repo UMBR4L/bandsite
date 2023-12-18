@@ -6,7 +6,9 @@
 
     <link rel="stylesheet" href="./styles/bio.css" />
 
-    <script defer src="./scripts/index-page.js"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer type="module" src="./scripts/index-page.js"></script>
+    <script defer type="module" src="./scripts/band-site-api.js"></script>
 
     <title>Band Site | Home</title>
   </head>
@@ -144,20 +146,20 @@
         <form id="commentForm">
           <div class="commentForm__div">
             <input
-              class="commentForm__div--nameInput"
+              class="commentForm__input--name"
               type="text"
               name="userName"
               value="Enter your name"
             />
             <!-- <input type="text" name="userComment"> -->
             <input
-              class="commentForm__div--commentInput"
+              class="commentForm__input--comment"
               type="text"
               name="userComment"
               value="Add a new comment"
             />
             <!-- <textarea name="commentArea" value="Add a new comment"></textarea> -->
-            <button type="submit">Comment</button>
+            <button class="commentForm__button--submitComment" type="submit">Comment</button>
           </div>
         </form>
 
