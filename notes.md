@@ -109,10 +109,10 @@ JS:
 - any class method that makes an API request must be marked with the 'async' keyword
     - remember to use 'await' when calling an async method
 
-### Bio Page - Comments Seciont
+### Bio Page - Comments Secion
 - must retrieve comment data from the provided API using the instance of 'BandSiteApi' class and display it on the page
 - users must be able to add new comments
-    - these comments are stroed in the backend using the instance of 'BandSiteApi' to communicate with the Api
+    - these comments are stored in the backend using the instance of 'BandSiteApi' to communicate with the Api
 - newly-added comments must be displayed with the existing comments with the newest comments at the top
 - the Bio Page must not reload when a comment is added
 - new comments are not required to have a provided avatar image

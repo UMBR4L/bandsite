@@ -9,20 +9,39 @@ class BandSiteApi {
   }
 
   async getComments() {
-    // const response = await axios.get(this.apiKey);
-    // console.log(response);
-
-    return axios
-      .get(
-        `${this.baseUrl}comments?api_key=${apiKey}`
-      )
+    return await axios
+      .get(`${this.baseUrl}comments?api_key=${apiKey}`)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
+        return response.data;
       });
   }
 
-  //   let apiA = new BandSiteApi("4339d897-1305-4029-a322-41e80aa78f8b");
-  //   let apiAComments = await apiA.getComments();
+  async postComment(newComment) {
+    const userName = newComment.userName.value;
+    const userComment = newComment.userComment.value;
+
+    const noDateComment = {
+      name: userName,
+      comment: userComment,
+    };
+
+    return await axios
+      .post(`${this.baseUrl}comments?api_key=${apiKey}`, noDateComment)
+      .then((response) => {
+        console.log(response);
+        return response;
+      });
+  }
+
+  async getShows() {
+    return await axios
+    .get(`${this.baseUrl}showdates?api_key=${apiKey}`)
+    .then((response) => {
+      console.log(response.data);
+      return response;
+    });
+  }
 }
 
 export default BandSiteApi;

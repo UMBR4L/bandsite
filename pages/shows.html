@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../styles/shows.css" />
 
     <script src="https://w.soundcloud.com/player/api.js" async></script>
-    <script defer src="../scripts/build-shows-page.js"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer type="module" src="../scripts/band-site-api.js"></script>
+    <script defer type="module" src="../scripts/build-shows-page.js"></script>
 
     <title>Band Site | Shows</title>
   </head>
@@ -23,13 +25,17 @@
           <h2 class="site-navigation__links--link current-page">
             <a href="../index.html">Biography</a>
           </h2>
-          <h2 class="site-navigation__links--link"><a href="./shows.html">Shows</a></h2>
+          <h2 class="site-navigation__links--link">
+            <a href="./shows.html">Shows</a>
+          </h2>
         </div>
       </nav>
       <!-- Hero image with band name -->
       <div class="hero">
         <h3 class="hero__heading heading">Club Club Worldwide!</h3>
-        <h2 class="hero__heading subheading">XG - LEFT RIGHT (HaZo X Ask Me Anything Remix)</h2>
+        <h2 class="hero__heading subheading">
+          XG - LEFT RIGHT (HaZo X Ask Me Anything Remix)
+        </h2>
         <div hero__soundcloud-player>
           <iframe
             width="100%"
