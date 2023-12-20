@@ -11,55 +11,15 @@ function formatDate(timestamp) {
 
   return userTimeStamp;
 }
-// create an array of show objects
-// const shows = [
-//   {
-//     date: "Mon Sept 06 2021",
-//     venue: "Ronald Lane",
-//     location: "San Francisco, CA",
-//   },
-//   {
-//     date: "Tue Sept 21 2021 ",
-//     venue: "Pier 3 East ",
-//     location: "San Francisco, CA ",
-//   },
-//   {
-//     date: "Fri Oct 15 2021 ",
-//     venue: "View Lounge ",
-//     location: "San Francisco, CA ",
-//   },
-//   {
-//     date: "Sat Nov 06 2021 ",
-//     venue: "Hyatt Agency",
-//     location: "San Francisco, CA ",
-//   },
-//   {
-//     date: "Fri Nov 26 2021",
-//     venue: "Moscow Center ",
-//     location: "San Francisco, CA ",
-//   },
-//   {
-//     date: "Wed Dec 15 2021 ",
-//     venue: "Press Club ",
-//     location: "San Francisco, CA",
-//   },
-// ];
 
 function displayShow(show) {
-  // const currentShows = await apiA.getShows();
-  // console.log(currentShows);
 
-  /* Always these same 5 steps */
-  // 1. select our container element (.song-list)
   const container = document.querySelector(".shows-list");
 
-  // 2. create the elements that make up the song, with their classes
   const showElement = document.createElement("li");
 
-  // 3. add classes and content
   showElement.classList.add("show");
 
-  // 4. Create inner elements by repeating steps 2-4
   const dateHeaderElement = document.createElement("h4");
   dateHeaderElement.classList.add("show__date-header");
   dateHeaderElement.innerText = "DATE";
@@ -97,12 +57,6 @@ function displayShow(show) {
   buyTicketsElement.type = "submit";
   showElement.appendChild(buyTicketsElement);
 
-  // const artistElement = document.createElement("div");
-  // artistElement.classList.add("song__details");
-  // artistElement.innerText = `by ${show.artist}`;
-  // showElement.appendChild(artistElement);
-
-  // 5. append the element to the page
   container.appendChild(showElement);
 }
 
@@ -110,11 +64,9 @@ async function displayShowsList() {
   const currentShows = await apiA.getShows();
   console.log(currentShows);
 
-  // clear the existing shows from the list
   const container = document.querySelector(".shows-list");
   container.innerHTML = "";
 
-  // use forEach to create a show item for each show
   currentShows.data.forEach((show) => {
     displayShow(show);
   });

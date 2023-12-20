@@ -1,9 +1,9 @@
 /* bio.sass */
 
 @use "./partials/_reset.scss";
+@use "./partials/_mixins.scss" as *;
 @use "./partials/_fonts.scss";
 @use "./partials/_global.scss";
-@use "./partials/_mixins.scss" as *;
 
 /* Rest of your styles go here */
 /* Hero */
@@ -74,7 +74,6 @@
 }
 
 #about__band-name {
-  font-family: "Avenir Next Demi", sans-serif;
   font-size: 1rem;
   @include tablet {
     padding: 2em 5em 0;
@@ -151,11 +150,13 @@ h4.gallery__heading.heading {
 }
 
 .commentForm__input--name {
+  font-family: "Avenir Next", sans-serif;
   max-width: 65%;
   min-height: 2rem;
 }
 
 .commentForm__input--comment {
+  font-family: "Avenir Next", sans-serif;
   max-width: 65%;
   min-height: 2rem;
 }
